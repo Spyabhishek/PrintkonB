@@ -1,0 +1,79 @@
+spring:
+  application:
+    name: ${APP_NAME:pdp}
+
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+
+# Common server config
+server:
+  port: ${PORT:8443}
+  servlet:
+    context-path: /
+#  ssl:
+#    enabled: true
+#    key-store: classpath:localhost-keystore.p12
+#    key-store-password: sandy@pdp44
+#    key-store-type: PKCS12
+#    key-alias: localhost
+
+# JWT & Security Configuration
+pdp:
+  app:
+    secret:
+      access:
+        token: ${PDP.APP.SECRET.ACCESS.TOKEN}
+
+app:
+  security:
+    jwt:
+      access-token-ttl: 15m
+      refresh-token-ttl: 14d
+      email-verification-ttl: 15m
+      password-reset-ttl: 10m
+      role-upgrade-ttl: 15m
+    cookie:
+      domain: ""
+      secure: true
+    brute-force:
+      max-attempts: 5
+      lockout-duration: 15m
+    device-hash-pepper: ${APP.SECURITY.DEVICE-HASH-PEPPER}
+
+  rate-limiting:
+    enabled: true
+    product-read-limit: 100  # requests per minute for product read endpoints
+    search-limit: 30         # requests per minute for search endpoints (more CPU intensive)
+    general-limit: 200       # requests per minute for other endpoints
+    window: PT1M 
+
+  # Default CORS (overridden per profile if needed)
+  cors:
+    allowed-origins:
+      - "https://localhost:3000"
+      - "https://192.168.31.181:3000/"
+    allowed-methods:
+      - GET
+      - POST
+      - PUT
+      - DELETE
+      - OPTIONS
+      - PATCH
+    allowed-headers:
+      - "*"
+    allow-credentials: true
+    max-age: 3600
+
+  # Default storage (overridden per profile if needed)
+  storage:
+    type: local
+    base-url: https://localhost:8443
+    local:
+      upload-dir: uploads/images
+      url-prefix: /api/images
+    s3:
+      bucket-name: ""
+      region: ""
+      access-key: ""
+      secret-key: ""
+      folder-prefix: images

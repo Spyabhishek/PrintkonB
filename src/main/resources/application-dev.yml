@@ -1,0 +1,77 @@
+spring:
+  datasource:
+    url: ${DATASOURCE_URL:jdbc:mysql://localhost:3306/printkon?createDatabaseIfNotExist=true}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:admin@root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        "[format_sql]": true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+
+  mail:
+    host: smtp.gmail.com
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            required: true
+            enable: true
+
+server:
+  address: 0.0.0.0
+  port: ${PORT:8443}
+  servlet:
+    context-path: /
+#  ssl:
+#    enabled: true
+#    key-store: classpath:localhost-keystore.p12
+#    key-password: sandy@pdp44
+#    key-store-type: PKCS12
+#    key-alias: localhost
+
+app:
+  cors:
+    allowed-origins:
+      - "http://localhost:3000"
+      - "http://127.0.0.1:3000"
+      - "http://localhost:8080"
+      - "http://192.168.31.181:3000"
+      - "http://192.168.31.181:8443"
+    allowed-methods:
+      - "*"
+    allowed-headers:
+      - "*"
+    allow-credentials: true
+    max-age: 3600
+
+  rate-limiting:
+    enabled: true
+    product-read-limit: 60   # Stricter in production
+    search-limit: 20         # More restrictive for search
+    general-limit: 20
+
+  storage:
+    type: local
+    base-url: https://192.168.31.181:8443
+    local:
+      upload-dir: uploads/dev-images
+      url-prefix: /api/images
+
+logging:
+  level:
+    "[com.printkon.pdp]": DEBUG
+    "[org.springframework.security]": DEBUG
+    "[org.hibernate.SQL]": DEBUG
+    "[org.hibernate.type.descriptor.sql.BasicBinder]": TRACE
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"

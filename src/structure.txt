@@ -1,0 +1,166 @@
+.
+├── main
+│   ├── java
+│   │   └── com
+│   │       └── printkon
+│   │           └── pdp
+│   │               ├── admin
+│   │               │   ├── AdminOrderController.java
+│   │               │   ├── AdminService.java
+│   │               │   └── dto
+│   │               ├── auth
+│   │               │   ├── AuthController.java
+│   │               │   ├── AuthService.java
+│   │               │   ├── dto
+│   │               │   │   ├── ForgotPasswordRequest.java
+│   │               │   │   ├── JwtResponse.java
+│   │               │   │   ├── LoginRequest.java
+│   │               │   │   ├── PasswordConfirmationRequest.java
+│   │               │   │   ├── ResetPasswordRequest.java
+│   │               │   │   └── SignUpRequest.java
+│   │               │   ├── models
+│   │               │   │   ├── JwtBlacklist.java
+│   │               │   │   ├── LoginAttemptId.java
+│   │               │   │   ├── LoginAttempt.java
+│   │               │   │   └── RefreshToken.java
+│   │               │   └── repositories
+│   │               │       ├── JwtBlacklistRepository.java
+│   │               │       ├── LoginAttemptRepository.java
+│   │               │       └── RefreshTokenRepository.java
+│   │               ├── bootstrap
+│   │               │   ├── DataSeeder.java
+│   │               │   └── RoleSeeder.java
+│   │               ├── catalog
+│   │               │   ├── CategoryController.java
+│   │               │   ├── dto
+│   │               │   │   ├── CategoryCreateRequest.java
+│   │               │   │   ├── CategoryResponse.java
+│   │               │   │   ├── CategoryUpdateRequest.java
+│   │               │   │   ├── ProductCreateRequest.java
+│   │               │   │   ├── ProductResponse.java
+│   │               │   │   └── ProductUpdateRequest.java
+│   │               │   ├── models
+│   │               │   │   ├── Category.java
+│   │               │   │   └── Product.java
+│   │               │   ├── ProductController.java
+│   │               │   ├── repositories
+│   │               │   │   ├── CategoryRepository.java
+│   │               │   │   └── ProductRepository.java
+│   │               │   └── services
+│   │               │       ├── CategoryService.java
+│   │               │       └── ProductService.java
+│   │               ├── common
+│   │               │   ├── dao
+│   │               │   │   └── UserDao.java
+│   │               │   ├── dto
+│   │               │   │   └── ResponseStructure.java
+│   │               │   ├── enums
+│   │               │   │   ├── AccountStatus.java
+│   │               │   │   ├── ERole.java
+│   │               │   │   ├── OrderStatus.java
+│   │               │   │   └── RequestStatus.java
+│   │               │   └── utils
+│   │               │       └── HashUtils.java
+│   │               ├── config
+│   │               │   ├── CorsProperties.java
+│   │               │   ├── RateLimitingConfig.java
+│   │               │   ├── RateLimitProperties.java
+│   │               │   ├── SecurityConfig.java
+│   │               │   ├── ValidationConfig.java
+│   │               │   └── WebConfig.java
+│   │               ├── exceptions
+│   │               │   ├── DuplicateEmailException.java
+│   │               │   ├── DuplicatePhoneException.java
+│   │               │   ├── GlobalExceptionHandler.java
+│   │               │   ├── InvalidCredentialsException.java
+│   │               │   ├── InvalidRoleException.java
+│   │               │   ├── TokenCompromiseException.java
+│   │               │   ├── UnauthorizedException.java
+│   │               │   └── UserNotFoundException.java
+│   │               ├── misc
+│   │               │   ├── DebugController.java
+│   │               │   └── Hello.java
+│   │               ├── notification
+│   │               │   ├── config
+│   │               │   │   └── EmailConfig.java
+│   │               │   ├── EmailService.java
+│   │               │   └── LinkGeneratorService.java
+│   │               ├── operator
+│   │               │   ├── dto
+│   │               │   │   └── OperatorResponse.java
+│   │               │   ├── OperatorOrderController.java
+│   │               │   └── OperatorService.java
+│   │               ├── order
+│   │               │   ├── dto
+│   │               │   │   ├── ApproveOrderRequest.java
+│   │               │   │   ├── OrderItemRequest.java
+│   │               │   │   ├── OrderItemResponse.java
+│   │               │   │   ├── OrderRequest.java
+│   │               │   │   └── OrderResponse.java
+│   │               │   ├── models
+│   │               │   │   ├── OrderItem.java
+│   │               │   │   └── Order.java
+│   │               │   ├── OrderController.java
+│   │               │   ├── OrderService.java
+│   │               │   └── repositories
+│   │               │       ├── OrderItemRepository.java
+│   │               │       └── OrderRepository.java
+│   │               ├── PdpApplication.java
+│   │               ├── role
+│   │               │   ├── dto
+│   │               │   │   ├── RoleUpgradeRequest.java
+│   │               │   │   └── RoleUpgradeResponse.java
+│   │               │   ├── models
+│   │               │   │   ├── Role.java
+│   │               │   │   └── RoleUpgradeRequest.java
+│   │               │   ├── repositories
+│   │               │   │   ├── RoleRepository.java
+│   │               │   │   └── RoleUpgradeRequestRepository.java
+│   │               │   ├── RoleUpgradeRequestController.java
+│   │               │   └── RoleUpgradeRequestService.java
+│   │               ├── security
+│   │               │   ├── AuthEntryPointJwt.java
+│   │               │   ├── AuthTokenFilter.java
+│   │               │   ├── JwtUtils.java
+│   │               │   └── RateLimitingFilter.java
+│   │               ├── storage
+│   │               │   ├── config
+│   │               │   │   └── StorageProperties.java
+│   │               │   ├── dto
+│   │               │   │   └── ImageUploadResponse.java
+│   │               │   ├── ImageController.java
+│   │               │   ├── LocalStorageService.java
+│   │               │   ├── S3StorageService.java
+│   │               │   └── StorageService.java
+│   │               └── user
+│   │                   ├── dto
+│   │                   │   ├── UserRequest.java
+│   │                   │   ├── UserResponse.java
+│   │                   │   └── UserUpdateRequest.java
+│   │                   ├── models
+│   │                   │   └── User.java
+│   │                   ├── repositories
+│   │                   │   └── UserRepository.java
+│   │                   ├── UserController.java
+│   │                   ├── UserDetailsImpl.java
+│   │                   ├── UserServiceImpl.java
+│   │                   └── UserService.java
+│   └── resources
+│       ├── application-dev.yml
+│       ├── application-prod.yml
+│       ├── application-test.yml
+│       ├── application.yml
+│       ├── localhost-keystore.p12
+│       ├── META-INF
+│       │   └── additional-spring-configuration-metadata.json
+│       ├── static
+│       └── templates
+├── structure.txt
+└── test
+    └── java
+        └── com
+            └── printlok
+                └── pdp
+                    └── PdpApplicationTests.java
+
+55 directories, 109 files

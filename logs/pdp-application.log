@@ -1,0 +1,81 @@
+2025-09-08 21:10:53 [restartedMain] INFO  com.printkon.pdp.PdpApplication - Starting PdpApplication using Java 17.0.16 with PID 12163 (/home/sandy/Desktop/printkon_workshop/pdp/target/classes started by sandy in /home/sandy/Desktop/printkon_workshop/pdp)
+2025-09-08 21:10:53 [restartedMain] INFO  com.printkon.pdp.PdpApplication - The following 1 profile is active: "prod"
+2025-09-08 21:10:53 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validationConfig' of type [com.printkon.pdp.config.ValidationConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [methodValidationPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-09-08 21:10:53 [restartedMain] INFO  c.p.pdp.config.ValidationConfig - Configuring Method Validation
+2025-09-08 21:10:53 [restartedMain] INFO  c.p.pdp.config.ValidationConfig - Configuring Bean Validation
+2025-09-08 21:10:53 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [methodValidationPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-09-08 21:10:53 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-08 21:10:53 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-08 21:10:53 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-08 21:10:53 [restartedMain] INFO  com.printkon.pdp.security.JwtUtils - JWT Utils initialized with configuration:
+2025-09-08 21:10:53 [restartedMain] INFO  com.printkon.pdp.security.JwtUtils -   - Access Token TTL: PT15M
+2025-09-08 21:10:53 [restartedMain] INFO  com.printkon.pdp.security.JwtUtils -   - Refresh Token TTL: PT336H
+2025-09-08 21:10:53 [restartedMain] INFO  com.printkon.pdp.security.JwtUtils -   - Cookie Secure: true
+2025-09-08 21:10:53 [restartedMain] INFO  com.printkon.pdp.security.JwtUtils -   - Max Login Attempts: 5
+2025-09-08 21:10:53 [restartedMain] INFO  com.printkon.pdp.security.JwtUtils -   - Lockout Duration: PT15M
+2025-09-08 21:10:53 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2025-09-08 21:10:53 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60b137d7
+2025-09-08 21:10:53 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2025-09-08 21:10:53 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-08 21:10:53 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-08 21:10:55 [restartedMain] INFO  c.p.pdp.storage.S3StorageService - S3 Storage Service initialized for bucket: your-prod-bucket
+2025-09-08 21:10:55 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-08 21:10:55 [restartedMain] INFO  o.a.t.u.net.NioEndpoint.certificate - Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [/home/sandy/.keystore] using alias [localhost] with trust store [null]
+2025-09-08 21:10:55 [restartedMain] INFO  com.printkon.pdp.PdpApplication - Started PdpApplication in 2.64 seconds (process running for 578.494)
+2025-09-08 21:11:35 [https-jsse-nio-8443-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-08 21:13:16 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2025-09-08 21:13:16 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2025-09-08 21:13:17 [restartedMain] INFO  com.printkon.pdp.PdpApplication - Starting PdpApplication using Java 17.0.16 with PID 12163 (/home/sandy/Desktop/printkon_workshop/pdp/target/classes started by sandy in /home/sandy/Desktop/printkon_workshop/pdp)
+2025-09-08 21:13:17 [restartedMain] INFO  com.printkon.pdp.PdpApplication - The following 1 profile is active: "prod"
+2025-09-08 21:13:17 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validationConfig' of type [com.printkon.pdp.config.ValidationConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [methodValidationPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-09-08 21:13:17 [restartedMain] INFO  c.p.pdp.config.ValidationConfig - Configuring Method Validation
+2025-09-08 21:13:17 [restartedMain] INFO  c.p.pdp.config.ValidationConfig - Configuring Bean Validation
+2025-09-08 21:13:17 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [methodValidationPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-09-08 21:13:17 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-08 21:13:17 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-08 21:13:17 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-08 21:13:17 [restartedMain] INFO  com.printkon.pdp.security.JwtUtils - JWT Utils initialized with configuration:
+2025-09-08 21:13:17 [restartedMain] INFO  com.printkon.pdp.security.JwtUtils -   - Access Token TTL: PT15M
+2025-09-08 21:13:17 [restartedMain] INFO  com.printkon.pdp.security.JwtUtils -   - Refresh Token TTL: PT336H
+2025-09-08 21:13:17 [restartedMain] INFO  com.printkon.pdp.security.JwtUtils -   - Cookie Secure: true
+2025-09-08 21:13:17 [restartedMain] INFO  com.printkon.pdp.security.JwtUtils -   - Max Login Attempts: 5
+2025-09-08 21:13:17 [restartedMain] INFO  com.printkon.pdp.security.JwtUtils -   - Lockout Duration: PT15M
+2025-09-08 21:13:17 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+2025-09-08 21:13:17 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ce60216
+2025-09-08 21:13:17 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+2025-09-08 21:13:17 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-08 21:13:17 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-08 21:13:18 [restartedMain] INFO  c.p.pdp.storage.S3StorageService - S3 Storage Service initialized for bucket: your-prod-bucket
+2025-09-08 21:13:18 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-08 21:13:19 [restartedMain] INFO  o.a.t.u.net.NioEndpoint.certificate - Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [/home/sandy/.keystore] using alias [localhost] with trust store [null]
+2025-09-08 21:13:19 [restartedMain] INFO  com.printkon.pdp.PdpApplication - Started PdpApplication in 1.995 seconds (process running for 721.822)
+2025-09-08 21:13:42 [https-jsse-nio-8443-exec-6] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-08 21:38:54 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+2025-09-08 21:38:54 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+2025-09-08 21:38:54 [restartedMain] INFO  com.printkon.pdp.PdpApplication - Starting PdpApplication using Java 17.0.16 with PID 12163 (/home/sandy/Desktop/printkon_workshop/pdp/target/classes started by sandy in /home/sandy/Desktop/printkon_workshop/pdp)
+2025-09-08 21:38:54 [restartedMain] INFO  com.printkon.pdp.PdpApplication - The following 1 profile is active: "prod"
+2025-09-08 21:38:55 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validationConfig' of type [com.printkon.pdp.config.ValidationConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [methodValidationPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-09-08 21:38:55 [restartedMain] INFO  c.p.pdp.config.ValidationConfig - Configuring Method Validation
+2025-09-08 21:38:55 [restartedMain] INFO  c.p.pdp.config.ValidationConfig - Configuring Bean Validation
+2025-09-08 21:38:55 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [methodValidationPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-09-08 21:38:55 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-08 21:38:55 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-08 21:38:55 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-08 21:38:55 [restartedMain] INFO  com.printkon.pdp.security.JwtUtils - JWT Utils initialized with configuration:
+2025-09-08 21:38:55 [restartedMain] INFO  com.printkon.pdp.security.JwtUtils -   - Access Token TTL: PT15M
+2025-09-08 21:38:55 [restartedMain] INFO  com.printkon.pdp.security.JwtUtils -   - Refresh Token TTL: PT336H
+2025-09-08 21:38:55 [restartedMain] INFO  com.printkon.pdp.security.JwtUtils -   - Cookie Secure: true
+2025-09-08 21:38:55 [restartedMain] INFO  com.printkon.pdp.security.JwtUtils -   - Max Login Attempts: 5
+2025-09-08 21:38:55 [restartedMain] INFO  com.printkon.pdp.security.JwtUtils -   - Lockout Duration: PT15M
+2025-09-08 21:38:55 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+2025-09-08 21:38:55 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@581f7b60
+2025-09-08 21:38:55 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+2025-09-08 21:38:55 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-08 21:38:55 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-08 21:38:55 [restartedMain] INFO  c.p.pdp.storage.S3StorageService - S3 Storage Service initialized for bucket: your-prod-bucket
+2025-09-08 21:38:56 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-08 21:38:56 [restartedMain] INFO  o.a.t.u.net.NioEndpoint.certificate - Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [/home/sandy/.keystore] using alias [localhost] with trust store [null]
+2025-09-08 21:38:56 [restartedMain] INFO  com.printkon.pdp.PdpApplication - Started PdpApplication in 1.874 seconds (process running for 2259.299)
+2025-09-08 21:39:11 [https-jsse-nio-8443-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-08 21:40:53 [Thread-27] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+2025-09-08 21:40:53 [Thread-27] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.

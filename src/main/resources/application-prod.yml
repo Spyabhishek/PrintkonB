@@ -1,0 +1,109 @@
+spring:
+  datasource:
+    url: ${DATASOURCE_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        "[format_sql]": false
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        jdbc:
+          "[batch_size]": 20
+        "[order_inserts]": true
+        "[order_updates]": true
+    show-sql: false
+
+  mail:
+    host: smtp.gmail.com
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          ssl:
+            trust: smtp.gmail.com
+
+server:
+  port: ${PORT:8443}
+  ssl:
+    enabled: true
+    key-store: classpath:localhost-keystore.p12
+    key-store-password: sandy@pdp44
+    key-store-type: PKCS12
+    key-alias: localhost
+  compression:
+    enabled: true
+  http2:
+    enabled: true
+
+app:
+  cors:
+    allowed-origins:
+      - "https://yourdomain.com"
+      - "https://www.yourdomain.com"
+    allowed-methods:
+      - GET
+      - POST
+      - PUT
+      - DELETE
+      - OPTIONS
+    allowed-headers:
+      - "Authorization"
+      - "Content-Type"
+      - "X-Requested-With"
+    allow-credentials: true
+    max-age: 7200
+
+  rate-limiting:
+    enabled: true
+    product-read-limit: 60   # Stricter in production
+    search-limit: 20         # More restrictive for search
+    general-limit: 20
+
+  storage:
+    type: s3
+    base-url: https://cdn.yourdomain.com
+    s3:
+      bucket-name: your-prod-bucket
+      region: ap-south-1
+      access-key: ${AWS_ACCESS_KEY}
+      secret-key: ${AWS_SECRET_KEY}
+      folder-prefix: images
+
+logging:
+  level:
+    "[com.printkon.pdp]": INFO
+    "[org.springframework]": WARN
+    "[org.hibernate]": WARN
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/pdp-application.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 30
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: when-authorized

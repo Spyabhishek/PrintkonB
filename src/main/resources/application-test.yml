@@ -1,0 +1,76 @@
+spring:
+  datasource:
+    url: ${DATASOURCE_URL:jdbc:h2:mem:testdb}
+    username: ${DB_USERNAME:sa}
+    password: ${DB_PASSWORD:}
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        "[format_sql]": false
+        dialect: org.hibernate.dialect.H2Dialect
+    show-sql: false
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  mail:
+    host: localhost
+    port: 1025
+    username: test
+    password: test
+    properties:
+      mail:
+        smtp:
+          auth: false
+          starttls:
+            enable: false
+
+server:
+  port: ${PORT:8081}
+  ssl:
+    enabled: false
+
+app:
+  security:
+    jwt:
+      access-token-ttl: 1m
+      refresh-token-ttl: 5m
+    brute-force:
+      max-attempts: 3
+      lockout-duration: 1m
+
+  rate-limiting:
+    enabled: false
+
+  cors:
+    allowed-origins:
+      - "http://localhost:3001"
+    allowed-methods:
+      - GET
+      - POST
+      - PUT
+      - DELETE
+    allowed-headers:
+      - "*"
+    allow-credentials: true
+    max-age: 1800
+
+  storage:
+    type: local
+    base-url: http://localhost:8081
+    local:
+      upload-dir: uploads/test-images
+      url-prefix: /api/images
+
+logging:
+  level:
+    "[com.printkon.pdp]": INFO
+    "[org.springframework]": WARN
+  pattern:
+    console: "%d{HH:mm:ss} %-5level %logger{36} - %msg%n"

@@ -1,0 +1,57 @@
+{"properties": [
+  {
+    "name": "pdp.app.secret.access.token",
+    "type": "java.lang.String",
+    "description": "A description for 'pdp.app.secret.access.token'"
+  },
+  {
+    "name": "app.security.jwt.access-token-ttl",
+    "type": "java.lang.String",
+    "description": "A description for 'app.security.jwt.access-token-ttl'"
+  },
+  {
+    "name": "app.security.device-hash-pepper",
+    "type": "java.lang.String",
+    "description": "A description for 'app.security.device-hash-pepper'"
+  },
+  {
+    "name": "app.security.jwt.refresh-token-ttl",
+    "type": "java.lang.String",
+    "description": "A description for 'app.security.jwt.refresh-token-ttl'"
+  },
+  {
+    "name": "app.security.jwt.email-verification-ttl",
+    "type": "java.lang.String",
+    "description": "A description for 'app.security.jwt.email-verification-ttl'"
+  },
+  {
+    "name": "app.security.jwt.password-reset-ttl",
+    "type": "java.lang.String",
+    "description": "A description for 'app.security.jwt.password-reset-ttl'"
+  },
+  {
+    "name": "app.security.jwt.role-upgrade-ttl",
+    "type": "java.lang.String",
+    "description": "A description for 'app.security.jwt.role-upgrade-ttl'"
+  },
+  {
+    "name": "app.security.cookie.domain",
+    "type": "java.lang.String",
+    "description": "A description for 'app.security.cookie.domain'"
+  },
+  {
+    "name": "app.security.cookie.secure",
+    "type": "java.lang.String",
+    "description": "A description for 'app.security.cookie.secure'"
+  },
+  {
+    "name": "app.security.brute-force.max-attempts",
+    "type": "java.lang.String",
+    "description": "A description for 'app.security.brute-force.max-attempts'"
+  },
+  {
+    "name": "app.security.brute-force.lockout-duration",
+    "type": "java.lang.String",
+    "description": "A description for 'app.security.brute-force.lockout-duration'"
+  }
+]}
