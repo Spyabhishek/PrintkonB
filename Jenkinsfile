@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Updated to your backend repo and credentials
-        DOCKER_IMAGE = "iamabhshek/PrintkonBackend"
+        DOCKER_IMAGE = "iamabhshek/printkonbackend"
         DOCKER_TAG = "${env.BUILD_NUMBER}"
     }
 
@@ -54,4 +54,5 @@ pipeline {
         }
     }
 }
+
 
